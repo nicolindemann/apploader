@@ -24,3 +24,8 @@ Designed to automate downloads of apps from the iTunes App Store. Performs an ac
 -h           This page
 ```
 
+## Find mouse position
+
+Using the MouseTools you can easily find out the right position on your system for the click on the download-button in iTunes. Just use:
+
+`./MouseTools -location`

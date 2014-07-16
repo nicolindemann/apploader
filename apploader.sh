@@ -27,8 +27,9 @@
 # Parsing is unforgiving so be precise in your syntax:
 read -r -d '' usage <<-'EOF'
   -u     [arg] URL to process. Required.
-  -posX        X Position of button in iTunes. Default: 170, Assuming Resolution of 1680x1050
-  -poxY        Y Position of button in iTunes. Default: 390, Assuming Resolution of 1680x1050
+  -posX        X Position of button in iTunes. Default: 170, Assuming Resolution from 1680x1050
+  -poxY        Y Position of button in iTunes. Default: 390, Assuming Resolution from 1680x1050
+  -w           Wait x seconds before try to download the app. Default: 5
   -d           Enables debug mode
   -c           Decolorize the output
   -h           This page
@@ -47,6 +48,7 @@ __FILE__="${__DIR__}/$(basename "${0}")"
 arg_c=0
 arg_posX=170
 arg_posY=390
+arg_w=5
 
 function _fmt ()      {
   local color_ok="\033[1;32m"
@@ -206,8 +208,8 @@ debug "iTunes should handle the URL, bringing it back in foreground..."
 open -a itunes
 debug "Maximize the iTunes-Window..."
 osascript maximizer.scpt iTunes
-debug "Wait 5 Seconds to iTunes open the AppStore-Page..."
-sleep 5
+debug "Wait ${arg_w} Seconds to iTunes open the AppStore-Page..."
+sleep ${arg_w}
 debug "Click ones on ${arg_posX},${arg_posY}..."
 ./MouseTools -x ${arg_posX} -y ${arg_posY} -leftClick
 debug "Jiggle the mouse..."

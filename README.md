@@ -12,4 +12,5 @@ Designed to automate downloads of apps from the iTunes App Store.
 
 ## Usage
 
-* `./apploader.sh [-d] [-c] -u <itunes-url> [-posX <x> X-Position of button in iTunes] [-posY <y> Y-Position of button in iTunes`
+`./apploader.sh [-d] [-c] -u <itunes-url> [-posX <x> X-Position of button in iTunes] [-posY <y> Y-Position of button in iTunes`
+

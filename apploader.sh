@@ -27,8 +27,8 @@
 # Parsing is unforgiving so be precise in your syntax:
 read -r -d '' usage <<-'EOF'
   -u     [arg] URL to process. Required.
-  -posX        X Position of button in iTunes. Default: 170, Assuming Resolution from 1680x1050
-  -poxY        Y Position of button in iTunes. Default: 390, Assuming Resolution from 1680x1050
+  -posX        X Position of button in iTunes. Default: 170, Assuming Resolution of 1680x1050
+  -poxY        Y Position of button in iTunes. Default: 390, Assuming Resolution of 1680x1050
   -d           Enables debug mode
   -c           Decolorize the output
   -h           This page

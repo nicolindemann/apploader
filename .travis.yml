@@ -1,0 +1,2 @@
+language: objective-c
+script: sudo softwareupdate -a -i

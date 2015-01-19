@@ -1,5 +1,4 @@
 language: objective-c
 script: 
-  - sudo -s
-  - softwareupdate -i Safari iTunes
-  - ./apploader.sh -u https://itunes.apple.com/de/app/google/id284815942?mt=8
+  - sudo softwareupdate -i Safari iTunes
+  - sudo ./apploader.sh -u https://itunes.apple.com/de/app/google/id284815942?mt=8

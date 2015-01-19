@@ -176,27 +176,32 @@ set -eu
 # This way you can catch the error in case mysqldump fails in `mysqldump |gzip`
 set -o pipefail
 
-pgrep iTunes 
+pid1="$(pgrep iTunes)"
+info ${pid1}
+ 
 # if [ $? -eq 1 ]
 # then
   info "iTunes not already stared. Starting..."
   open -a itunes
   debug "Wait 5 Seconds to iTunes come up..."
-  sleep 15
-  pgrep iTunes 
+  sleep 25
+pid2="$(pgrep iTunes)"
+info ${pid2}
 #   if [ $? -eq 1 ]
 #   then
 #     error "Could not start iTunes."
 #  fi
 # fi
- pgrep Safari  
+pid3="$(pgrep Safari)"
+info ${pid3}
 # if [ $? -eq 1 ]
 # then
   info "Safari not already stared. Starting..."
   open -a safari
   debug "Wait 5 Seconds to Safari come up..."
-  sleep 15
-  pgrep Safari 
+  sleep 25
+pid3="$(pgrep Safari)"
+info ${pid3}
 #  if [ $? -eq 1 ]
 #  then
 #    error "Could not start Safari."

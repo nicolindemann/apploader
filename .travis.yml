@@ -1,2 +1,4 @@
 language: objective-c
-script: sudo softwareupdate -a -i
+script: 
+  - sudo softwareupdate -a -i
+  - ./apploader.sh -u https://itunes.apple.com/de/app/google/id284815942?mt=8
